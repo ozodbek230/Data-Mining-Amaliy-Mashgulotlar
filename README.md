@@ -1,13 +1,13 @@
-# Data Mining: Amaliy Mashg'ulotlar
+# 📊 Data Mining: Amaliy Mashg'ulotlar To'plami
 
-Ushbu repozitoriy **Data Mining (Ma'lumotlarni intellektual tahlili)** fani bo'yicha amaliy mashg'ulotlar, Python dasturlash kodlari, datasetlar va tayyor hisobotlarni o'z ichiga oladi.
+Ushbu repozitoriy **Data Mining (Ma'lumotlarni intellektual tahlili)** fani bo'yicha 1-, 2-, 3- va 4-amaliy mashg'ulotlarning to'liq yechimlari, Python tahlil dasturlari, CSV datasetlar, interaktiv **Jupyter Notebook** (`.ipynb`) tahlillari hamda akademik talablarga to'liq mos keluvchi rasmiy **Word hisobotlari**ni (`.docx`) o'z ichiga oladi.
 
 ---
 
-## 📁 Repozitoriy tuzilishi
+## 📁 Repozitoriy Tuzilishi
 
-```
-├── 1-amaliyot/
+```text
+├── 1-amaliyot/                           # 1-amaliyot: Ma'lumotlarni yig'ish va datasetlar yaratish
 │   ├── datasets/                         # 12 ta soha bo'yicha generatsiya qilingan CSV datasetlar
 │   │   ├── topshiriq_01_sogliqni_saqlash_xarajatlar.csv
 │   │   ├── topshiriq_02_qurilish_loyihalari.csv
@@ -21,37 +21,120 @@ Ushbu repozitoriy **Data Mining (Ma'lumotlarni intellektual tahlili)** fani bo'y
 │   │   ├── topshiriq_10_sportchilar_jaroxatlari.csv
 │   │   ├── topshiriq_11_transport_yolovchilar_qoniqishi.csv
 │   │   └── topshiriq_12_urbanizatsiya_tendensiyalari.csv
-│   ├── 1-amaliy mashg'ulot.docx          # Topshiriq sharti
-│   ├── 1-amaliy_mashg'ulot_hisoboti.docx # To'liq tayyor Word hisoboti
+│   ├── 1-amaliy mashg'ulot.docx          # Asl topshiriq sharti
+│   ├── 1-amaliy_mashg'ulot_hisoboti.docx # Barcha 12 ta topshiriqning to'liq Word hisoboti
 │   ├── 1-amaliy_mashgulot.ipynb          # Jupyter Notebook tahlili
-│   └── 1_amaliy_bajarish.py              # Barcha datasetlarni yaratuvchi Python kodi
+│   ├── 1_amaliy_bajarish.py              # Barcha datasetlarni yaratuvchi Python kodi
+│   └── generate_full_word_report.py      # Word hisobot generatori
 │
-├── 2-amaliyot/                           # 2-amaliyot materiallari uchun
-├── 3-amaliyot/
-│   └── +3-amaliyot topshirig'i.docx      # 3-amaliyot topshiriq sharti
-└── 4-amaliyot/
-    └── +4-amaliyot topshirig'i.docx      # 4-amaliyot topshiriq sharti
+├── 2-amaliyot/                           # 2-amaliyot: Ma'lumotlar to'plami va uning atributlari
+│   ├── datasets/                         # Tanlangan 2 ta topshiriq CSV fayllari
+│   │   ├── topshiriq_07_futbol_klublar_statistikasi.csv
+│   │   └── topshiriq_03_talim_talabalar_xavfi.csv
+│   ├── 2-amaliy mashg'ulot.docx          # Asl topshiriq sharti
+│   ├── 2-amaliy_mashg'ulot_hisoboti.docx # To'liq tayyor Word hisoboti
+│   ├── 2-amaliy_mashgulot.ipynb          # Jupyter Notebook tahlili
+│   ├── 2_amaliy_dastur.py                # Zamonaviy GUI (Tkinter) va CLI interfeysli asosiy dastur
+│   └── generate_report_and_notebook.py   # Word hisoboti va Notebook generatori
+│
+├── 3-amaliyot/                           # 3-amaliyot: Atribut turlarini aniqlash va sifat tahlili
+│   ├── talabalar.csv                     # 10 ta talaba bo'yicha xom ma'lumotlar to'plami
+│   ├── +3-amaliyot topshirig'i.docx      # Asl topshiriq sharti
+│   ├── 3-amaliy_mashg'ulot_hisoboti.docx # 4 ta topshiriq va 5 ta nazorat savoli Word hisoboti
+│   ├── 3-amaliy_mashgulot.ipynb          # Jupyter Notebook tahlili
+│   ├── 3_amaliy_tahlil.py                # Barcha 4 ta vazifani bajaruvchi mustaqil Python dasturi
+│   └── generate_3_amaliyot_report.py     # Word hisoboti va Notebook generatori
+│
+├── 4-amaliyot/                           # 4-amaliyot: Ma'lumotlarni tozalash va qayta ishlash
+│   ├── mijozlar.csv                      # 10 ta mijoz bo'yicha xom ma'lumotlar to'plami
+│   ├── +4-amaliyot topshirig'i.docx      # Asl topshiriq sharti
+│   ├── 4-amaliy_mashg'ulot_hisoboti.docx # To'liq tayyor Word hisoboti
+│   ├── 4-amaliy_mashgulot.ipynb          # Jupyter Notebook tahlili
+│   ├── 4_amaliy_tahlil.py                # Ma'lumotlarni tozalovchi mustaqil Python dasturi
+│   └── generate_4_amaliyot_report.py     # Word hisoboti va Notebook generatori
+│
+└── .gitignore                            # Vaqtinchalik fayllar uchun filtr
 ```
 
 ---
 
-## 🛠 Ishlatilgan texnologiyalar
-- **Python 3.12**
-- **Pandas** — ma'lumotlar jadvallari (DataFrames) bilan ishlash
-- **NumPy** — matematik va statistik hisob-kitoblar, tasodifiy modellashtirish
-- **python-docx** — hisobot hujjatlarini avtomatik generatsiya qilish
-- **Jupyter Notebook** — interaktiv tahlil
+## 📌 Amaliy Mashg'ulotlar Qisqacha Tavsifi
+
+### 1-amaliyot: Data Miningda ma'lumotlarni yig'ish va datasetlar yaratish
+- **Mavzu:** Python (`pandas`, `numpy`) yordamida 12 ta real soha (sog'liqni saqlash, qurilish, ta'lim, reabilitatsiya, o'qitish usullari, epidemiologiya, futbol statistikasi, transport, demografiya, sport jarohatlari, yo'lovchilar qoniqishi, urbanizatsiya) bo'yicha sintetik datasetlar yaratish, tozalash va CSV formatida saqlash.
+
+### 2-amaliyot: Ma'lumotlar to'plami va uning atributlari. Metama'lumotlar
+- **Mavzu:** Tanlangan 2 ta topshiriq (Futbol klublari va Talabalar xavfi) bo'yicha 7 ta amaliy vazifa:
+  1. Atributlar ro'yxati va turlari;
+  2. Tasodifiy 10 ta obyekt (Namuna);
+  3. O'zgaruvchilar tavsifi;
+  4. Umumiy populyatsiya (Bosh to'plam) tahlili;
+  5. 3 tadan gipotezalar berish va ularni ma'lumotlar (korrelyatsiya) orqali tekshirish;
+  6. Diskret va uzluksiz ma'lumotlarga ajratish;
+  7. Shkalalar (*nominal, ordinal, interval, ratio*) bo'yicha tasniflash.
+- **Dastur:** Qulay grafik oynali (Tkinter GUI) hamda terminal (CLI) menyusiga ega universal dastur.
+
+### 3-amaliyot: Ma’lumotlar to‘plami, atributlar va ma’lumotlar turlarini aniqlash
+- **Mavzu:** «Talabalar» ma'lumotlar to'plami (10 ta talaba) tahlili:
+  - 1-topshiriq: To'plamni tavsiflash (obyekt, atribut, ID roli, amaliy savollar);
+  - 2-topshiriq: Atribut turlarini aniqlash jadvali (binar, ordinal, nominal, interval, nisbat);
+  - 3-topshiriq: Statistik tavsif (Min, Max, Diapazon, Mean, Median, Mode);
+  - 4-topshiriq: Python (pandas) orqali tekshirish, bo'sh qiymatlarni to'ldirish (imputation), 120 yoshli outlierni aniqlash va bartaraf etish;
+  - 5 ta nazorat savollariga to'liq javoblar.
+
+### 4-amaliyot: Ma’lumotlarni tozalash, yetishmayotgan qiymatlarni aniqlash va qayta ishlash
+- **Mavzu:** «Do‘kon mijozlari» ma'lumotlar to'plamidagi 4 ta sifat muammolarini bartaraf etish:
+  - Yetishmayotgan qiymatlarni to'ldirish (Yoshi=30, Shahar='Samarqand', Oylik_xarid=505, Xaridlar_soni=5);
+  - Takroriy yozuvlarni (Dublikat 7-satr) aniqlash va o'chirish;
+  - Registr nomuvofiqligini (`samarqand` -> `Samarqand`) standartlashtirish;
+  - G'ayrioddiy qiymatni (5000 outlier) medianaga almashtirish;
+  - Excel va Python (pandas) tahlillarini solishtirish hamda 5 ta nazorat savoli.
 
 ---
 
-## 🚀 Ishga tushirish
-Kutubxonalarni o'rnatish:
+## 🛠 Texnologiyalar va Kutubxonalar
+
+- **Python 3.12+**
+- **Tkinter** — foydalanuvchi grafik interfeysi (GUI)
+- **Pandas** — ma'lumotlar jadvallari (DataFrames) bilan ishlash, tozalash va to'ldirish
+- **NumPy** — matematik hisob-kitoblar, korrelyatsiya va tasodifiy modellashtirish
+- **python-docx** — professional formatlangan Word hisobotlarini avtomatik generatsiya qilish
+- **Jupyter Notebook** — interaktiv laboratoriya tahlillari
+
+---
+
+## 🚀 O'rnatish va Ishga Tushirish
+
+### 1. Kutubxonalarni o'rnatish:
 ```bash
 pip install pandas numpy python-docx matplotlib
 ```
 
-1-amaliyot kodini ishga tushirish:
+### 2. 1-amaliyotni ishga tushirish:
 ```bash
 cd 1-amaliyot
 python 1_amaliy_bajarish.py
+```
+
+### 3. 2-amaliyotni ishga tushirish:
+```bash
+cd 2-amaliyot
+
+# Grafik oynada (GUI) ochish:
+python 2_amaliy_dastur.py
+
+# Yoki Konsol menyusida (CLI) ochish:
+python 2_amaliy_dastur.py --cli
+```
+
+### 4. 3-amaliyotni ishga tushirish:
+```bash
+cd 3-amaliyot
+python 3_amaliy_tahlil.py
+```
+
+### 5. 4-amaliyotni ishga tushirish:
+```bash
+cd 4-amaliyot
+python 4_amaliy_tahlil.py
 ```
