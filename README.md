@@ -1,6 +1,6 @@
 # 📊 Data Mining: Amaliy Mashg'ulotlar To'plami
 
-Ushbu repozitoriy **Data Mining (Ma'lumotlarni intellektual tahlili)** fani bo'yicha 1-, 2-, 3- va 4-amaliy mashg'ulotlarning to'liq yechimlari, Python tahlil dasturlari, CSV datasetlar, interaktiv **Jupyter Notebook** (`.ipynb`) tahlillari hamda akademik talablarga to'liq mos keluvchi rasmiy **Word hisobotlari**ni (`.docx`) o'z ichiga oladi.
+Ushbu repozitoriy **Data Mining (Ma'lumotlarni intellektual tahlili)** fani bo'yicha 1-, 2-, 3-, 4- va 5-amaliy mashg'ulotlarning to'liq yechimlari, Python tahlil dasturlari, CSV datasetlar, interaktiv **Jupyter Notebook** (`.ipynb`) tahlillari hamda akademik talablarga to'liq mos keluvchi rasmiy **Word hisobotlari**ni (`.docx`) o'z ichiga oladi.
 
 ---
 
@@ -53,6 +53,14 @@ Ushbu repozitoriy **Data Mining (Ma'lumotlarni intellektual tahlili)** fani bo'y
 │   ├── 4_amaliy_tahlil.py                # Ma'lumotlarni tozalovchi mustaqil Python dasturi
 │   └── generate_4_amaliyot_report.py     # Word hisoboti va Notebook generatori
 │
+│
+├── 5-amaliyot/                           # 5-amaliyot: Normallashtirish va standartlashtirish
+│   ├── +5-Normallashtirish_va_standartlashtirish_amaliyot.docx # Asl topshiriq sharti
+│   ├── 5-amaliy_mashg'ulot_hisoboti.docx # To'liq tayyor Word hisoboti
+│   ├── 5-amaliy_mashgulot.ipynb          # Jupyter Notebook tahlili
+│   ├── 5_amaliy_tahlil.py                # Normallashtirish va ML modellari tahlili kodi
+│   └── generate_5_amaliyot_report.py     # Word hisoboti va Notebook generatori
+│
 └── .gitignore                            # Vaqtinchalik fayllar uchun filtr
 ```
 
@@ -91,6 +99,15 @@ Ushbu repozitoriy **Data Mining (Ma'lumotlarni intellektual tahlili)** fani bo'y
   - Excel va Python (pandas) tahlillarini solishtirish hamda 5 ta nazorat savoli.
 
 ---
+
+
+### 5-amaliyot: Ma’lumotlarni normallashtirish va standartlashtirish usullarini qo‘llash
+- **Mavzu:** Belgilarni bir xil masshtabga keltirish (Min-Max, Z-score, O'nlik masshtablash) usullarini qo'lda va scikit-learn orqali tadqiq qilish hamda ularning mashinaviy o'rganish modellariga ta'siri:
+  - 1-topshiriq: Xodimlar yoshi bo'yicha Min-Max [0, 1] va [-1, 1] oraliqlariga normallashtirish hamda o'nlik masshtablash;
+  - 2-topshiriq: Talabalar test ballari bo'yicha Z-score standartlashtirish (o'rtacha=0, std=1 ekanligini isbotlash);
+  - 3-topshiriq: Python'da MinMaxScaler va StandardScaler (Evklid masofasi va outlier ta'sirini tahlil qilish);
+  - 4-topshiriq: Wine to'plamida k-NN va Qarorlar daraxti (Decision Tree) modellarining masshtablashga sezgirligi tahlili (k-NN aniqligi 72.2% dan 96.3% ga oshishi, Pipeline va Data Leakage mexanizmlari);
+  - Nazorat savollariga to'liq tahliliy javoblar.
 
 ## 🛠 Texnologiyalar va Kutubxonalar
 
